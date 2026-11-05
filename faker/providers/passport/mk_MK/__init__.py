@@ -16,7 +16,7 @@ class Provider(PassportProvider):
 
     Number format: 1 uppercase letter + 7 digits (9-char MRZ field, padded with '<')
     ICAO/MRZ country code: MKD
-    Validity: 2 years (under 4), 5 years (4–27), 10 years (27+)
+    Validity: 2 years (under 4), 5 years (4-27), 10 years (27+)
     """
 
     # 1 letter + 7 digits — fits standard ICAO 9-char MRZ passport number field
