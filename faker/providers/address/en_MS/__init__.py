@@ -453,7 +453,7 @@ class Provider(AddressProvider):
 
     state = administrative_unit
 
-    def postcode_in_state(self, state_abbr: Optional[str] = None) -> str:
+    def postcode_in_state(self, state_abbr: str | None = None) -> str:
         """
         :returns: A random postcode within the provided state
 
