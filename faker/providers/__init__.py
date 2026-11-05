@@ -629,8 +629,7 @@ class BaseProvider:
         text = _re_perc.sub(lambda x: str(self.random_digit_not_null()), text)
         text = _re_dol.sub(lambda x: str(self.random_digit_above_two()), text)
         text = _re_excl.sub(lambda x: str(self.random_digit_or_empty()), text)
-        text = _re_at.sub(lambda x: str(self.random_digit_not_null_or_empty()), text)
-        return text
+        return _re_at.sub(lambda x: str(self.random_digit_not_null_or_empty()), text)
 
     def lexify(self, text: str = "????", letters: str = string.ascii_letters) -> str:
         """Generate a string with each question mark ('?') in ``text``
