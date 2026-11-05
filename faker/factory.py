@@ -63,7 +63,7 @@ class Factory:
         return faker
 
     @classmethod
-    @functools.lru_cache(maxsize=None)
+    @functools.cache
     def _find_provider_class(
         cls,
         provider_path: str,
