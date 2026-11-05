@@ -55,8 +55,7 @@ class Provider(BaseProvider):
         elif part_of_speech:
             if part_of_speech not in self.parts_of_speech:  # type: ignore[attr-defined]
                 raise ValueError(f"{part_of_speech} is not recognized as a part of speech.")
-            else:
-                word_list = self.parts_of_speech[part_of_speech]  # type: ignore[attr-defined]
+            word_list = self.parts_of_speech[part_of_speech]  # type: ignore[attr-defined]
         else:
             word_list = self.word_list  # type: ignore[attr-defined]
 
