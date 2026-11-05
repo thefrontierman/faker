@@ -61,7 +61,7 @@ class Provider(AutomotiveProvider):
         "113",
         # Sakha Republic
         "14",
-        # Republic of North Ossetia–Alania
+        # Republic of North Ossetia-Alania
         "15",
         # Republic of Tatarstan
         "16",
