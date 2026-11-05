@@ -686,7 +686,7 @@ class DynamicProvider(BaseProvider):
     def __init__(
         self,
         provider_name: str,
-        elements: Optional[List] = None,
+        elements: Optional[list] = None,
         generator: Optional[Any] = None,
     ):
         """
