@@ -1,7 +1,7 @@
 import random
 
 from datetime import date, timedelta
-from typing import Tuple
+from typing import Optional, Tuple
 
 from faker.typing import SexLiteral
 
@@ -24,7 +24,7 @@ class Provider(PassportProvider):
         "#########",
     )
 
-    def passport_dates(self, birthday: date = date.today()) -> Tuple[str, str, str]:
+    def passport_dates(self, birthday: Optional[date] = None) -> Tuple[str, str, str]:
         """Generates a formatted date of birth, issue, and expiration dates.
         issue and expiration dates are conditioned to fall within U.S. standards of 5 and 10 year expirations
 
@@ -35,8 +35,10 @@ class Provider(PassportProvider):
 
         -https://travel.state.gov/content/travel/en/passports/passport-help/faqs.html
         """
-        birth_date = f"{birthday:%d %b %Y}"
         today = date.today()
+        if birthday is None:
+            birthday = today
+        birth_date = f"{birthday:%d %b %Y}"
         age = (today - birthday).days // 365
         if age < 16:
             expiry_years = 5
