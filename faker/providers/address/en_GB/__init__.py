@@ -493,7 +493,7 @@ class Provider(AddressProvider):
     _postcode_sets = OrderedDict(
         (
             (" ", " "),
-            ("N", [str(i) for i in range(0, 10)]),
+            ("N", [str(i) for i in range(10)]),
             ("A", POSTAL_ZONES_ONE_CHAR),
             ("B", "ABCDEFGHKLMNOPQRSTUVWXY"),
             ("C", "ABCDEFGHJKSTUW"),
