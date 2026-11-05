@@ -301,7 +301,7 @@ class Provider(AddressProvider):
         "غليزان",
         "مازونة",
         "عمي موسى",
-        # New wilayas (49–58)
+        # New wilayas (49-58)
         "تيميمون",
         "برج باجي مختار",
         "أولاد جلال",
