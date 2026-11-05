@@ -618,7 +618,7 @@ class Provider(AddressProvider):
         """
         return "%04d" % self.generator.random.randint(200, 4299)
 
-    def postcode_in_state(self, state_abbr: Optional[str] = None) -> str:
+    def postcode_in_state(self, state_abbr: str | None = None) -> str:
         """
         :example: '4703'
         """
