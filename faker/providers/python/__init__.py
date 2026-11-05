@@ -288,7 +288,7 @@ class Provider(BaseProvider):
 
         if length < 0:
             raise ValueError("Length must be a non-negative integer.")
-        elif length == 0:
+        if length == 0:
             return 0
         else:
             min_value = 10 ** (length - 1)
