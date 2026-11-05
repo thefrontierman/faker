@@ -17,7 +17,7 @@ def checksum(digits: List[int]) -> int:
         p -= 1
 
     reminder = s % 11
-    if reminder == 0 or reminder == 1:
+    if reminder in {0, 1}:
         return 0
     else:
         return 11 - reminder
