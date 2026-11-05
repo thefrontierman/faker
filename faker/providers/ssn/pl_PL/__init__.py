@@ -48,8 +48,7 @@ class Provider(SsnProvider):
             *divmod(birth_date.day, 10),
         ]
 
-        for _ in range(4):
-            pesel_digits.append(self.random_digit())
+        pesel_digits.extend(self.random_digit() for _ in range(4))
 
         pesel_digits.append(checksum(pesel_digits))
 
