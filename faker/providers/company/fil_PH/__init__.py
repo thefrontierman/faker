@@ -1,5 +1,5 @@
 from collections import OrderedDict
-from typing import Sequence
+from collections.abc import Sequence
 
 from ..en_PH import Provider as EnPhProvider
 
