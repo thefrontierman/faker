@@ -208,7 +208,7 @@ class Provider(AutomotiveProvider):
             return random.choice(prefix), region_number
         except KeyError:
             region_names = ", ".join(self.license_region_data.keys())
-            raise KeyError(f"Keys name must be only {region_names}")
+            raise KeyError(f"Keys name must be only {region_names}") from None
 
     def license_plate(self, region_name: Optional[str] = None, temporary_plate: bool = False) -> str:
         """Generate a license plate.
