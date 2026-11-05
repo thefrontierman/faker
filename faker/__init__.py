@@ -4,4 +4,4 @@ from faker.proxy import Faker
 
 VERSION = "40.44.0"
 
-__all__ = ("Factory", "Generator", "Faker")
+__all__ = ("Factory", "Faker", "Generator")
