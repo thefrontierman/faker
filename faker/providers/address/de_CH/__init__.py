@@ -216,7 +216,7 @@ class Provider(AddressProvider):
         ("ZH", "Zürich"),
     )
 
-    def canton(self) -> Tuple[str, str]:
+    def canton(self) -> tuple[str, str]:
         """
         Randomly returns a swiss canton ('Abbreviated', 'Name').
         :example ('ZH', 'Zürich')
