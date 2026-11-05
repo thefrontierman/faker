@@ -45,7 +45,7 @@ class Provider(AddressProvider):
         "China",
         "Cookinseln",
         "Costa Rica",
-        "Côte d’Ivoire",
+        "Côte d’Ivoire",  # noqa: RUF001
         "Demokratische Republik Kongo",
         "Demokratische Volksrepublik Korea",
         "Deutschland",
