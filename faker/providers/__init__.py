@@ -2,7 +2,7 @@ import re
 import string
 
 from collections import OrderedDict
-from typing import Any, Collection, List, Optional, Sequence, TypeVar, Union
+from typing import Any, ClassVar, Collection, Dict, List, Optional, Sequence, Tuple, TypeVar, Union
 
 from ..generator import Generator
 from ..typing import OrderedDictType
@@ -26,7 +26,7 @@ class BaseProvider:
     __use_weighting__ = False
 
     # Locales supported by Linux Mint from `/usr/share/i18n/SUPPORTED`
-    language_locale_codes = {
+    language_locale_codes: ClassVar[Dict[str, Tuple[str, ...]]] = {
         "aa": ("DJ", "ER", "ET"),
         "af": ("ZA",),
         "ak": ("GH",),
