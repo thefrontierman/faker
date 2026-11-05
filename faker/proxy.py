@@ -147,7 +147,7 @@ class Faker:
         result._factories = list(result._factory_map.values())
         result._weights = copy.deepcopy(self._weights, memodict)
         result._unique_proxy = UniqueProxy(result)
-        result._unique_proxy._seen = {k: {result._unique_proxy._sentinel} for k in self._unique_proxy._seen.keys()}
+        result._unique_proxy._seen = {k: {result._unique_proxy._sentinel} for k in self._unique_proxy._seen}
         result._optional_proxy = OptionalProxy(result)
         return result
 
