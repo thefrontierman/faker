@@ -1683,7 +1683,7 @@ class Provider(AddressProvider):
         ]
     )
 
-    def _ordinal_string(self, num: Union[int, str]) -> str:
+    def _ordinal_string(self, num: int | str) -> str:
         if isinstance(num, str):
             num = int(num)
         suffix = ["th", "st", "nd", "rd", "th"][min(num % 10, 4)]
