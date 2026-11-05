@@ -354,17 +354,13 @@ class Provider(CompanyProvider):
         """
         val = self.random_int(1, 104)
 
-        # handle special cases
-        if val == 101:
-            return 120
-        elif val == 102:
-            return 121
-        elif val == 103:
-            return 888
-        elif val == 104:
-            return 999
-        # else: between 1 and 100 are all valid
-        return val
+        # handle special cases; values 1-100 are all valid
+        return {
+            101: 120,
+            102: 121,
+            103: 888,
+            104: 999,
+        }.get(val, val)
 
     def company_vat(self) -> str:
         """
