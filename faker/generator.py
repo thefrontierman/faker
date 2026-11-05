@@ -1,7 +1,7 @@
 import random as random_module
 import re
 
-from typing import TYPE_CHECKING, Any, Callable, Dict, Hashable, List, Optional, Type, Union
+from typing import TYPE_CHECKING, Any, Callable, ClassVar, Dict, Hashable, List, Optional, Type, Union
 
 from .typing import SeedType
 
@@ -17,16 +17,18 @@ Sentinel = object()
 
 
 class Generator:
-    __config: Dict[str, Dict[Hashable, Any]] = {
+    _default_config: ClassVar[Dict[str, Dict[Hashable, Any]]] = {
         "arguments": {},
     }
+
+    __config: Dict[str, Dict[Hashable, Any]]
 
     _is_seeded = False
     _global_seed = Sentinel
 
     def __init__(self, **config: Dict) -> None:
         self.providers: List["BaseProvider"] = []
-        self.__config = dict(list(self.__config.items()) + list(config.items()))
+        self.__config = dict(list(self._default_config.items()) + list(config.items()))
         self.__random = random
 
     def add_provider(self, provider: Union["BaseProvider", Type["BaseProvider"]]) -> None:
