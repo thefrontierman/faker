@@ -53,7 +53,7 @@ def _get_localized_provider_info(locale):
         try:
             locale_module_path = f"{provider_name}.{locale}"
             locale_module = importlib.import_module(locale_module_path)
-            provider = getattr(locale_module, "Provider")
+            provider = locale_module.Provider
         except (ModuleNotFoundError, AttributeError):
             continue
         else:
