@@ -574,7 +574,9 @@ class Provider(BaseProvider):
         networks_to_exclude.sort(key=lambda x: x.prefixlen)
         for network_to_exclude in networks_to_exclude:
 
-            def _exclude_ipv4_network(network):
+            def _exclude_ipv4_network(
+                network, _network_to_exclude=network_to_exclude
+            ):
                 """
                 Exclude a single network from another single network
                 and return a list of networks. Network to exclude
@@ -588,12 +590,12 @@ class Provider(BaseProvider):
                           even partially, the network is excluded.
                 """
                 try:
-                    return list(network.address_exclude(network_to_exclude))
+                    return list(network.address_exclude(_network_to_exclude))
                 except ValueError:
                     # If networks overlap partially, `address_exclude`
                     # will fail, but the network still must not be used
                     # in generation.
-                    if network.overlaps(network_to_exclude):
+                    if network.overlaps(_network_to_exclude):
                         return []
                     else:
                         return [network]
