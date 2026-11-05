@@ -77,7 +77,7 @@ def print_doc(
     provider_or_field: Optional[str] = None,
     args: Optional[List[T]] = None,
     lang: str = DEFAULT_LOCALE,
-    output: Optional[Union[TextIO, TextIOWrapper]] = None,
+    output: Optional[TextIO | TextIOWrapper] = None,
     seed: Optional[float] = None,
     includes: Optional[List[str]] = None,
 ) -> None:
