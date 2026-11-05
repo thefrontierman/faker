@@ -407,8 +407,7 @@ class Provider(AddressProvider):
                 1,
             )
             return self._postcode_replace(postal_code_format)
-        else:
-            raise Exception("Province Abbreviation not found in list")
+        raise Exception("Province Abbreviation not found in list")
 
     def postalcode_in_province(self, province_abbr: Optional[str] = None) -> str:
         return self.postcode_in_province(province_abbr)
