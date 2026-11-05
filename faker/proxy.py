@@ -391,7 +391,7 @@ class UniqueProxy:
                 hashable_retval = self._make_hashable(retval)
 
             # Original uniqueness logic (with potential first attempt already done)
-            for i in range(_UNIQUE_ATTEMPTS):
+            for _ in range(_UNIQUE_ATTEMPTS):
                 if hashable_retval not in generated:
                     break
                 retval = function(*args, **kwargs)
