@@ -77,6 +77,7 @@ def _std_strftime(dt_obj: datetime, fmt_char: str) -> str:
         warnings.warn(
             (f"String format directive unknown/not support: %{fmt_char}" f"The system raises this ValueError: {err}"),
             UserWarning,
+            stacklevel=2,
         )
         str_ = fmt_char
     return str_
