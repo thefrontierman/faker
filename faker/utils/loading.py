@@ -13,7 +13,7 @@ def get_path(module: ModuleType) -> str:
 
         if getattr(sys, "_MEIPASS", False):
             # PyInstaller
-            lib_dir = Path(getattr(sys, "_MEIPASS"))
+            lib_dir = Path(sys._MEIPASS)  # type: ignore[attr-defined]
         else:
             # others
             lib_dir = Path(sys.executable).parent / "lib"
