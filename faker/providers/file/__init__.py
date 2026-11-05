@@ -314,10 +314,7 @@ class Provider(BaseProvider):
         """
 
         if extension is not None and not isinstance(extension, str):
-            if len(extension):
-                extension = self.random_element(extension)
-            else:
-                extension = ""
+            extension = self.random_element(extension) if len(extension) else ""
 
         fs_rule = self.file_systems_path_rules.get(file_system_rule, None)
         if not fs_rule:
