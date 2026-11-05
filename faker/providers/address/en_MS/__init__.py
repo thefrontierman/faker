@@ -469,7 +469,7 @@ class Provider(AddressProvider):
         try:
             # some states have multiple ranges so first pick one, then generate a random postcode
             range = self.generator.random.choice(self.states_postcode[state_abbr])
-            postcode = "%d" % (self.generator.random.randint(*range))
+            postcode = "{:d}".format(self.generator.random.randint(*range))
 
             # zero left pad up until desired length (some have length 3 or 4)
             target_postcode_len = 5
