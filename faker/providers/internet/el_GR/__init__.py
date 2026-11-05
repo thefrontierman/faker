@@ -55,8 +55,8 @@ def latinize(value: str) -> str:
     """
 
     def replace_double_character(match):
-        search = ("Θ Χ Ψ " "θ χ ψ " "ΟΥ ΑΥ ΕΥ " "Ου Αυ Ευ " "ου αυ ευ").split()
-        replace = ("TH CH PS " "th ch ps " "OU AU EU " "Ou Au Eu " "ou au eu").split()
+        search = ["Θ", "Χ", "Ψ", "θ", "χ", "ψ", "ΟΥ", "ΑΥ", "ΕΥ", "Ου", "Αυ", "Ευ", "ου", "αυ", "ευ"]
+        replace = ["TH", "CH", "PS", "th", "ch", "ps", "OU", "AU", "EU", "Ou", "Au", "Eu", "ou", "au", "eu"]
         matched = match.group(0)
         if matched in search:
             return replace[search.index(matched)]
