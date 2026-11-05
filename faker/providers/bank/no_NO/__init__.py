@@ -19,7 +19,7 @@ class Provider(BankProvider):
             if first_10.startswith("0000"):
                 check = calculate_luhn(int(first_10[4:]))
                 return first_10 + str(check)
-            check = sum(w * int(d) for w, d in zip(MOD11_WEIGHTS, first_10)) % 11
+            check = sum(w * int(d) for w, d in zip(MOD11_WEIGHTS, first_10, strict=False)) % 11
             # A remainder of 10 has no single-digit representation, so that
             # draw is discarded and another one taken.
             if check != 10:
