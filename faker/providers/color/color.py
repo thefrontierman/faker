@@ -339,8 +339,7 @@ class RandomColor:
             hue_range: Tuple[int, int] = color["hue_range"][0]
             if hue_range[0] <= hue <= hue_range[1]:
                 return self.colormap[color_name]
-        else:
-            raise ValueError("Value of hue `%s` is invalid." % hue)
+        raise ValueError("Value of hue `%s` is invalid." % hue)
 
     def random_within(self, r: Sequence[int]) -> int:
         """Return a random integer within the range ``r``."""
