@@ -8148,9 +8148,7 @@ class Provider(SsnProvider):
         """
         Checks if the one given is a leap year
         """
-        if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-            return True
-        return False
+        return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
 
     def _get_max_day(self, is_leap_year: bool, month: str) -> int:
         """
