@@ -1739,8 +1739,7 @@ class Provider(AddressProvider):
     def building_number(self) -> str:
         if self.random_int() % 2 == 0:
             return self.standalone_building_number()
-        else:
-            return self.partitioned_building_number()
+        return self.partitioned_building_number()
 
     def ordinal_street_number(self) -> str:
         return self._ordinal_string(self.random_int(1, 99))
