@@ -428,7 +428,8 @@ class Provider(AddressProvider):
         "바",
         "##",
         "###",
-    ) + tuple(ALPHABET)
+        *ALPHABET,
+    )
     land_numbers = (
         "###",
         "###-#",
