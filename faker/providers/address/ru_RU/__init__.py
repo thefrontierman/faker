@@ -1585,7 +1585,7 @@ class Provider(AddressProvider):
                 if street in self.street_titles_irregular_masc.keys():
                     result = self.street_titles_irregular_masc[street]
                 else:
-                    if stem.endswith("ск") or stem.endswith("цк"):
+                    if stem.endswith(("ск", "цк")):
                         result = stem + "ий"
                     else:
                         result = stem + "ый"
