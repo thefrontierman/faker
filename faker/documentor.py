@@ -113,7 +113,7 @@ class Documentor:
                 # make a fake example
                 example = self.generator.format(name, *faker_args, **faker_kwargs)
             except (AttributeError, ValueError, NotImplementedError) as e:
-                warnings.warn(str(e))
+                warnings.warn(str(e), stacklevel=1)
                 continue
             formatters[signature] = example
 
