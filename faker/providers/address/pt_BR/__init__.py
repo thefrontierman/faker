@@ -103,7 +103,7 @@ class Provider(AddressProvider):
     building_number_formats = ("%", "%#", "%#", "%#", "%##")
 
     postcode_raw_formats = ("########",)
-    postcode_all_formats = postcode_raw_formats + ("#####-###",)
+    postcode_all_formats = (*postcode_raw_formats, "#####-###")
 
     bairros = (
         "Aarão Reis",
