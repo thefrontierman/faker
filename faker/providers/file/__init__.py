@@ -272,7 +272,7 @@ class Provider(BaseProvider):
         self,
         depth: int = 1,
         category: Optional[str] = None,
-        extension: Optional[Union[str, Sequence[str]]] = None,
+        extension: Optional[str | Sequence[str]] = None,
         absolute: Optional[bool] = True,
         file_system_rule: Literal["linux", "windows"] = "linux",
         allowed_path_traversal_elements: Optional[Sequence[str]] = None,
