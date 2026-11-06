@@ -6,7 +6,7 @@ from ..de import Provider as AddressProvider
 class Provider(AddressProvider):
     city_formats = ("{{city_name}}",)
     building_number_formats = ("%", "%#", "%#", "%#", "%##")
-    street_suffixes = ["strasse"]
+    street_suffixes = ("strasse",)
     street_name_formats = ("{{last_name}}{{street_suffix}}",)
     street_address_formats = ("{{street_name}} {{building_number}}",)
     address_formats = ("{{street_address}}\n{{postcode}} {{city}}",)
