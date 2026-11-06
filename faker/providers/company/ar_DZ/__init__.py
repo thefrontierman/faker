@@ -20,7 +20,7 @@ class Provider(CompanyProvider):
         "ش.ت.",
         "ش.ت.ب.",
         "م.ع.",
-        "م.ع.ا.ت.",
+        "م.ع.\u0627.ت.",
     )
 
     catch_phrase_formats = ("{{catch_phrase_noun}} {{catch_phrase_verb}} {{catch_phrase_attribute}}",)
