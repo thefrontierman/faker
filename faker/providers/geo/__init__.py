@@ -1002,7 +1002,7 @@ class Provider(BaseProvider):
         ("12.12278", "-61.62498", "Grenville", "GD", "America/Grenada"),
     )
 
-    def coordinate(self, center: Optional[float] = None, radius: Union[float, int] = 0.001) -> Decimal:
+    def coordinate(self, center: Optional[float] = None, radius: float | int = 0.001) -> Decimal:
         """
         Optionally center the coord and pick a point within radius.
         """
