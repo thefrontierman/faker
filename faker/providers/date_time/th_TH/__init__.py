@@ -115,7 +115,7 @@ def _thai_strftime(
         # Thai Buddhist century (AD+543)/100 + 1 as decimal number;
         str_ = str(int(year / 100) + 1).zfill(2)
     elif fmt_char == "c":
-        # Locale’s appropriate date and time representation
+        # Locale's appropriate date and time representation
         # Wed  6 Oct 01:40:00 1976
         # พ   6 ต.ค. 01:40:00 2519  <-- left-aligned weekday, right-aligned day
         str_ = (
@@ -147,10 +147,10 @@ def _thai_strftime(
         # BSD extension, ' 6-Oct-1976'
         str_ = f"{dt_obj.day:>2}-{_TH_ABBR_MONTHS[dt_obj.month - 1]}-{year:04}"
     elif fmt_char == "X":
-        # Locale’s appropriate time representation.
+        # Locale's appropriate time representation.
         str_ = f"{dt_obj:%H:%M:%S}"
     elif fmt_char == "x":
-        # Locale’s appropriate date representation.
+        # Locale's appropriate date representation.
         str_ = f"{dt_obj:%d/%m}/{year:04}"
     elif fmt_char == "Y":
         # Year with century
