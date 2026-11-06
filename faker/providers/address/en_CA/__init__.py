@@ -1,6 +1,6 @@
 import re
 
-from typing import Optional
+from typing import ClassVar, Dict, List, Optional
 
 from faker.providers import ElementsType
 
@@ -322,7 +322,7 @@ class Provider(AddressProvider):
         "YT",
     )
 
-    provinces_postcode_prefixes = {
+    provinces_postcode_prefixes: ClassVar[Dict[str, List[str]]] = {
         "NL": ["A"],
         "NS": ["B"],
         "PE": ["C"],
