@@ -13,7 +13,7 @@ class FakerEnum(Enum):
     """Required for faker.providers.enum"""
 
     A = auto
-    B = auto
+    B = A  # alias of A, same as the previous duplicate `auto` value
 
 
 class Documentor:
