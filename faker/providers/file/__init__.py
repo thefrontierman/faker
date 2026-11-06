@@ -324,7 +324,7 @@ class Provider(BaseProvider):
         separator = fs_rule["separator"]
 
         path: str = self.file_name(category, extension)
-        for _ in range(0, depth):
+        for _ in range(depth):
             if allowed_path_traversal_elements:
                 segment = self.random_element(list(allowed_path_traversal_elements) + [self.generator.word()])
             else:
