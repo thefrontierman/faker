@@ -2,7 +2,8 @@ import bisect
 import itertools
 
 from random import Random
-from typing import Generator, Iterable, Optional, Sequence, TypeVar
+from typing import Optional, TypeVar
+from collections.abc import Generator, Iterable, Sequence
 
 from faker.generator import random as mod_random
 
