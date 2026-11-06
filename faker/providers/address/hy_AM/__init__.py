@@ -608,7 +608,7 @@ class Provider(AddressProvider):
 
     def city_prefix(self) -> str:
         """
-        :example: 'ք.'
+        :example: '\u0584.'
         """
         return self.random_element(self.city_prefixes)
 
@@ -680,6 +680,6 @@ class Provider(AddressProvider):
 
     def village_prefix(self) -> str:
         """
-        :example: 'գ.'
+        :example: '\u0563.'
         """
         return self.random_element(self.village_prefixes)
