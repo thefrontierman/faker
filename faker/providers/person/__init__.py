@@ -212,10 +212,7 @@ class Provider(BaseProvider):
         return self.random_element(self.last_names)
 
     def name_male(self) -> str:
-        if hasattr(self, "formats_male"):
-            formats = self.formats_male  # type: ignore[attr-defined]
-        else:
-            formats = self.formats
+        formats = self.formats_male if hasattr(self, "formats_male") else self.formats  # type: ignore[attr-defined]
         pattern: str = self.random_element(formats)
         return self.generator.parse(pattern)
 
