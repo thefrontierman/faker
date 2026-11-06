@@ -516,7 +516,7 @@ class Provider(AddressProvider):
         :param include_freely_associated_states: If True, freely-associated states will be included.
             If False, sovereign states in free association with the US will be excluded.
         """
-        abbreviations: Tuple[str, ...] = self.states_abbr
+        abbreviations: tuple[str, ...] = self.states_abbr
         if include_territories:
             abbreviations += self.territories_abbr
         if include_freely_associated_states:
