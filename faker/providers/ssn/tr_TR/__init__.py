@@ -19,8 +19,7 @@ class Provider(BaseProvider):
         """
         digits = [self.random_int(1, 9)]
 
-        for _ in range(8):
-            digits.append(self.random_int(0, 9))
+        digits.extend(self.random_int(0, 9) for _ in range(8))
 
         odd_sum = sum(digits[i] for i in [0, 2, 4, 6, 8])
         even_sum = sum(digits[i] for i in [1, 3, 5, 7])
