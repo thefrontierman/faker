@@ -555,8 +555,7 @@ class Provider(AddressProvider):
 
             return postcode
 
-        else:
-            raise Exception("State Abbreviation not found in list")
+        raise Exception("State Abbreviation not found in list")
 
     def military_ship(self) -> str:
         """
