@@ -32,7 +32,7 @@ class Provider(CompanyProvider):
             """Calculate the checksum using mod 11,2 method"""
             factors = [7, 9, 10, 5, 8, 4, 2]
             sum_ = 0
-            for x, y in zip(number, factors):
+            for x, y in zip(number, factors, strict=False):
                 sum_ = sum_ + int(x) * y
             if sum_ % 11 == 1:
                 raise ValueError("Checksum 1 is invalid")
