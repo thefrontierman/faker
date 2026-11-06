@@ -43,6 +43,7 @@ class Provider(BaseProvider):
                 "Passing `value_types` as positional arguments is going to be "
                 "deprecated.  Pass them as a list or tuple instead.",
                 PendingDeprecationWarning,
+                stacklevel=2,
             )
         if allowed_types is not None and not isinstance(allowed_types, (list, tuple)):
             allowed_types = (allowed_types,)
@@ -50,6 +51,7 @@ class Provider(BaseProvider):
                 "Passing `allowed_types` as positional arguments is going to be "
                 "deprecated.  Pass them as a list or tuple instead.",
                 PendingDeprecationWarning,
+                stacklevel=2,
             )
         if value_types is None:
             value_types = ()
@@ -509,6 +511,7 @@ class Provider(BaseProvider):
                 f"Number of nb_elements is greater than the number of words in the list."
                 f" {words_list_count} words will be used.",
                 RuntimeWarning,
+                stacklevel=2,
             )
             nb_elements = words_list_count
 
