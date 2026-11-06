@@ -351,7 +351,7 @@ class Provider(AddressProvider):
         abbreviations: Tuple[str, ...] = self.provinces_abbr
         return self.random_element(abbreviations)
 
-    def postcode_in_state(self, state_abbr: Optional[str] = None) -> str:
+    def postcode_in_state(self, state_abbr: str | None = None) -> str:
         """
         Returns a random postcode within the provided province abbreviation.
 
