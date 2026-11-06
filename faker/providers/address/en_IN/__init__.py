@@ -89,7 +89,7 @@ class Provider(AddressProvider):
         "Gwalior",
         "Guwahati",
         "Chandigarh",
-        "Hubli–Dharwad",
+        "Hubli\u2013Dharwad",
         "Mysore",
         "Tiruchirappalli",
         "Bareilly",
