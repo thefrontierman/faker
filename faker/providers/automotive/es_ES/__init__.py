@@ -98,7 +98,7 @@ class Provider(AutomotiveProvider):
         )
         return self.numerify(temp)
 
-    def license_plate_by_province(self, province_prefix: Optional[str] = None) -> str:
+    def license_plate_by_province(self, province_prefix: str | None = None) -> str:
         """Generate a provincial license plate.
 
         If a value for ``province_prefix`` is provided, the value will be used
