@@ -15,6 +15,7 @@ from typing import Any, Callable, Dict, Iterator, Optional, Tuple, Union
 from faker.typing import Country, DateParseType
 
 from .. import BaseProvider, ElementsType
+import contextlib
 
 localized = True
 
@@ -2212,10 +2213,8 @@ class Provider(BaseProvider):
         try:
             if tzinfo is None:
                 pick = convert_timestamp_to_datetime(timestamp, _get_local_timezone())
-                try:
+                with contextlib.suppress(OSError):
                     pick = pick.astimezone(dttimezone.utc).replace(tzinfo=None)
-                except OSError:
-                    pass
             else:
                 pick = datetime.fromtimestamp(timestamp, tzinfo)
         except OverflowError:
