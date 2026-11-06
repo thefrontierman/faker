@@ -60,6 +60,6 @@ class Provider(InternetProvider):
                 return name_part + company_noun_chain
             else:
                 company_type = self.generator.format("company_type")
-                company_elements = [name_part] + company_nouns
+                company_elements = [name_part, *company_nouns]
                 acronym = "".join([word[0] for word in company_elements])
                 return acronym + company_type
