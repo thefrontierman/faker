@@ -672,7 +672,7 @@ class Provider(BaseProvider):
         :param multicast: Multicast address
         :returns: MAC Address
         """
-        mac = [self.generator.random.randint(0x00, 0xFF) for _ in range(0, 5)]
+        mac = [self.generator.random.randint(0x00, 0xFF) for _ in range(5)]
         if multicast is True:
             mac.insert(0, self.generator.random.randrange(0x01, 0xFF, 2))
         else:
