@@ -106,10 +106,7 @@ class Provider(BaseProvider):
                 sum_ += int(char)
             else:
                 sum_ += sum(map(int, str(int(char) * 2)))
-        if sum_ > 10:
-            sum_ = int(str(sum_)[-1])
-        else:
-            sum_ = sum_
+        sum_ = int(str(sum_)[-1]) if sum_ > 10 else sum_
         sum_ = 10 - (sum_ % 10)
 
         if first_chr in ["F", "J", "K", "N", "P", "Q", "R", "S", "U", "V", "W"]:
