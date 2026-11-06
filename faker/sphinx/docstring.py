@@ -3,7 +3,7 @@ import logging
 import re
 
 from collections import namedtuple
-from typing import Pattern
+from re import Pattern
 
 from faker import Faker
 from faker.config import AVAILABLE_LOCALES, DEFAULT_LOCALE
