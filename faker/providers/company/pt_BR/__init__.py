@@ -101,8 +101,7 @@ class Provider(CompanyProvider):
         """
         pattern: str = self.random_element(self.catch_phrase_formats)
         catch_phrase = self.generator.parse(pattern)
-        catch_phrase = catch_phrase[0].upper() + catch_phrase[1:]
-        return catch_phrase
+        return catch_phrase[0].upper() + catch_phrase[1:]
 
     def _company_id_base(self, use_alphanumeric: bool) -> str:
         if use_alphanumeric:
