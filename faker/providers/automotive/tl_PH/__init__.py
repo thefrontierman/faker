@@ -7,4 +7,3 @@ class Provider(EnPhAutomotiveProvider):
     There is no difference from the ``en_PH`` implementation.
     """
 
-    pass
