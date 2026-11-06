@@ -46,7 +46,7 @@ class Provider(SsnProvider):
             else:
                 dob = self.generator.date_object()
         except Exception:
-            raise ValueError("Birthday format must be DD-MM-YYYY")
+            raise ValueError("Birthday format must be DD-MM-YYYY") from None
 
         if gender and gender not in ("M", "F"):
             raise ValueError('Gender must be "m" or "f" or None')
