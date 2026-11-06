@@ -411,7 +411,7 @@ class Provider(BaseProvider):
         :param address_class: IPv4 address class (a, b, or c)
         """
         # If `address_class` has an unexpected value, use the whole IPv4 pool
-        if address_class in _IPv4Constants._network_classes.keys():
+        if address_class in _IPv4Constants._network_classes:
             networks_attr = f"_cached_all_class_{address_class}_networks"
             all_networks = [_IPv4Constants._network_classes[address_class]]  # type: ignore
         else:
@@ -447,7 +447,7 @@ class Provider(BaseProvider):
         :param address_class: IPv4 address class (a, b, or c)
         """
         # If `address_class` has an unexpected value, choose a valid value at random
-        if not address_class or address_class not in _IPv4Constants._network_classes.keys():
+        if not address_class or address_class not in _IPv4Constants._network_classes:
             address_class = self.ipv4_network_class()
 
         # Return cached network and weight data if available for a specific address class
@@ -482,7 +482,7 @@ class Provider(BaseProvider):
         :param address_class: IPv4 address class (a, b, or c)
         """
         # If `address_class` has an unexpected value, choose a valid value at random
-        if address_class not in _IPv4Constants._network_classes.keys():
+        if address_class not in _IPv4Constants._network_classes:
             address_class = self.ipv4_network_class()
 
         # Return cached network and weight data if available for a specific address class
