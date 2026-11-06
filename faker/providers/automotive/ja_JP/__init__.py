@@ -110,7 +110,6 @@ class Provider(AutomotiveProvider):
         n = len(raw_digits)
 
         if n == 4:
-            v = f"{raw_digits[:2]}{self.DELIMITER}{raw_digits[2:]}"
-            return v
+            return f"{raw_digits[:2]}{self.DELIMITER}{raw_digits[2:]}"
         else:
             return raw_digits.rjust(4, self.MIDDLE_DOT)
