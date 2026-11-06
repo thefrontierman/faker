@@ -1551,23 +1551,6 @@ class Provider(PersonProvider):
         "Univ.Prof.",
     )
 
-    prefixes_male = (
-        "Herr",
-        "Dr.",
-        "Ing.",
-        "Dipl.-Ing.",
-        "Prof.",
-        "Univ.Prof.",
-    )
-    prefixes_female = (
-        "Frau",
-        "Dr.",
-        "Ing.",
-        "Dipl.-Ing.",
-        "Prof.",
-        "Univ.Prof.",
-    )
-
     prefixes = ("Dr.", "Mag.", "Ing.", "Dipl.-Ing.", "Prof.", "Univ.Prof.")
 
     # source:
