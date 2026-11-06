@@ -8121,21 +8121,13 @@ class Provider(SsnProvider):
         """
         Returns list of vowels in provided string
         """
-        vowels = []
-        for char in sequence:
-            if char in VOWELS:
-                vowels.append(char)
-        return vowels
+        return [char for char in sequence if char in VOWELS]
 
     def _get_consonants(self, sequence: str) -> list:
         """
         Returns list of consonants in provided string
         """
-        consonants = []
-        for char in sequence:
-            if char in CONSONANTS:
-                consonants.append(char)
-        return consonants
+        return [char for char in sequence if char in CONSONANTS]
 
     def _pad_shorter(self, sequence: str) -> str:
         """
