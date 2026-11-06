@@ -180,7 +180,7 @@ class Provider(ColorProvider):
             ("Crimson (UA)", "#9E1B32"),
             ("Kadetgrå", "#91A3B0"),
             ("Brunbrun", "#A17A74"),
-            ("Stor dukkert o’ruby", "#9C2542"),
+            ("Stor dukkert o\u2019ruby", "#9C2542"),
             ("Fransk kalk", "#9EFD38"),
             ("Ametyst", "#9966CC"),
             ("Kobber rose", "#996666"),
