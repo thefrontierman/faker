@@ -49,10 +49,7 @@ class Provider(SsnProvider):
 
         # Gender: 0-4 female (born 1900s: odd, 2000s: even), 5-9 male
         is_male = rng.choice([True, False])
-        if is_male:
-            g = rng.randint(5, 9)
-        else:
-            g = rng.randint(0, 4)
+        g = rng.randint(5, 9) if is_male else rng.randint(0, 4)
 
         bb = f"{rng.randint(0, 99):02d}"
 
