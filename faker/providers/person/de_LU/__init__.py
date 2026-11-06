@@ -934,7 +934,11 @@ class Provider(PersonProvider):
     )
 
     first_names_nonbinary = OrderedDict(
-        [("Claudy", 0.00390625), ("Cyrille", 0.0078125), ("Dominique", 0.125)]
-        + list(first_names_female.items())
-        + list(first_names_male.items())
+        [
+            ("Claudy", 0.00390625),
+            ("Cyrille", 0.0078125),
+            ("Dominique", 0.125),
+            *first_names_female.items(),
+            *first_names_male.items(),
+        ]
     )
