@@ -66,8 +66,8 @@ def print_provider(
             # We could coerce to bytes, but that would fail anyway when we will
             # try to `print` the line.
             lines = ["<bytes>"]
-        except UnicodeEncodeError:
-            raise Exception(f"error on {signature!r} with value {example!r}")
+        except UnicodeEncodeError as err:
+            raise Exception(f"error on {signature!r} with value {example!r}") from err
         for left, right in itertools.zip_longest(signature_lines, lines, fillvalue=""):
             line = f"\t{left:<{margin}}  {right}"
             print(_encode_for_output(line, output), file=output)
@@ -109,8 +109,8 @@ def print_doc(
         else:
             try:
                 print(fake.format(provider_or_field, *args), end="", file=output)
-            except AttributeError:
-                raise ValueError(f'No faker found for "{provider_or_field}({args})"')
+            except AttributeError as err:
+                raise ValueError(f'No faker found for "{provider_or_field}({args})"') from err
 
     else:
         doc = documentor.Documentor(fake)
