@@ -237,7 +237,7 @@ class Provider(BankProvider):
         "BX",
         "BB",
     )
-    swift_branch_codes = [
+    swift_branch_codes = (
         "203",
         "BTB",
         "CIC",
@@ -248,7 +248,7 @@ class Provider(BankProvider):
         "RET",
         "VOD",
         "XXX",
-    ]
+    )
 
     def bban(self) -> str:
         """Generate a valid BBAN."""
