@@ -26,8 +26,7 @@ class Provider(InternetProvider):
     def domain_word(self) -> str:
         company = self.generator.format("company")
         company_elements = company.split(" ")
-        company = latinize(company_elements.pop(0))
-        return company
+        return latinize(company_elements.pop(0))
 
 
 # ``slugify`` doesn't replace greek glyphs.
