@@ -18,10 +18,9 @@ def rut_check_digit(number: int) -> str:
     mod = -sum % 11
     if mod == 11:
         return "0"
-    elif mod == 10:
+    if mod == 10:
         return "K"
-    else:
-        return str(mod)
+    return str(mod)
 
 
 class Provider(BaseProvider):
