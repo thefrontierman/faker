@@ -1110,7 +1110,7 @@ class Provider(CompanyProvider):
     def company_prefix(self) -> str:
         """
         :example: 'ООО'
-        """
+        """  # noqa: RUF002 - the Cyrillic example prefix is intentional
         return self.random_element(self.company_prefixes)
 
     def businesses_inn(self) -> str:
