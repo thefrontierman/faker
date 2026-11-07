@@ -119,8 +119,7 @@ class Provider(BaseProvider):
         """Generate a valid credit card number."""
         card = self._credit_card_type(card_type)
         prefix: str = self.random_element(card.prefixes)
-        number = self._generate_number(self.numerify(prefix), card.length)
-        return number
+        return self._generate_number(self.numerify(prefix), card.length)
 
     def credit_card_expire(
         self,
