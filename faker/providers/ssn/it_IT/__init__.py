@@ -8018,11 +8018,11 @@ class Provider(SsnProvider):
         sex: int = self.random_int(min=0, max=1)
         surname: str = self._get_surname_letters()
         name: str = self._get_name_letters(sex)
-        year: str = "%02d" % self.random_int(min=0, max=99)
+        year: str = f"{self.random_int(min=0, max=99):02d}"
         is_leap_year: bool = self.is_leap_year(int(year))
         month: str = self.random_element(MONTHS_LIST)
         max_day: int = self._get_max_day(is_leap_year=is_leap_year, month=month)
-        day: str = "%02d" % (self.random_int(min=1, max=max_day) + (40 if sex == 1 else 0))
+        day: str = f"{self.random_int(min=1, max=max_day) + (40 if sex == 1 else 0):02d}"
         municipality: str = self.random_element(MUNICIPALITIES_LIST)
         code: str = f"{surname}{name}{year}{month}{day}{municipality}"
         return code + checksum(code)
