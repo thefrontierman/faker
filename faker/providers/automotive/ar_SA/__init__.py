@@ -1,4 +1,5 @@
 import re
+from typing import ClassVar
 
 from .. import Provider as AutomotiveProvider
 
@@ -20,7 +21,7 @@ class Provider(AutomotiveProvider):
     PLATE_CHARS_EN = "ABDEGHJKLNRSTUVXZ"
     PLATE_CHARS_AR = "أبدعقهحكلنرسطوىصم"
 
-    PLATE_MAP = {
+    PLATE_MAP: ClassVar[dict[str, str]] = {
         "A": "ا",
         "B": "ب",
         "D": "د",
