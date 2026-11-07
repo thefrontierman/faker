@@ -26,7 +26,7 @@ class Provider(CreditCardProvider):
         )
     )
 
-    def credit_card_full(self, card_type: Optional[CardType] = None) -> str:
+    def credit_card_full(self, card_type: CardType | None = None) -> str:
         """Generate UA Credit Card:
         Supported card types 'visa', 'mastercard', 'prostir', 'maestro'
 
