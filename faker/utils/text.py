@@ -1,7 +1,7 @@
 import re
 import unicodedata
 
-from typing import Pattern
+from re import Pattern
 
 _re_pattern: Pattern = re.compile(r"[^\w\s-]", flags=re.U)
 _re_pattern_allow_dots: Pattern = re.compile(r"[^\.\w\s-]", flags=re.U)
