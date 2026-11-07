@@ -74,7 +74,7 @@ class Provider(SsnProvider):
             pnr = f"{birthday:%d%m%y}{suffix:02}{gender_num}"
             pnr_nums = [int(ch) for ch in pnr]
             k1 = checksum(Provider.scale1, pnr_nums)
-            k2 = checksum(Provider.scale2, pnr_nums + [k1])
+            k2 = checksum(Provider.scale2, [*pnr_nums, k1])
             # Checksums with a value of 10 is rejected.
             # https://no.wikipedia.org/wiki/F%C3%B8dselsnummer
             if k1 == 10 or k2 == 10:
