@@ -154,7 +154,7 @@ class Provider(CurrencyProvider):
         ("UGX", "Chelín ugandés"),
         ("USD", "Dólar de Estados Unidos"),
         ("UYU", "Peso uruguayo"),
-        ("UZS", "Soʻm Uzbekistani"),
+        ("UZS", "So\u02bbm Uzbekistani"),
         ("VEF", "Bolívar venezolano"),
         ("VND", "Đồng vietnamita"),
         ("VUV", "Vanuatu vatu"),
