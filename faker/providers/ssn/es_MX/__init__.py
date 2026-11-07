@@ -223,9 +223,7 @@ class Provider(BaseProvider):
         birth_date = birthday.strftime("%y%m%d")
         disambiguation_code = random.choice(ALPHANUMERIC) + random.choice(ALPHANUMERIC) + random.choice(ALPHANUMERIC)
 
-        random_rfc = name_initials + birth_date + disambiguation_code
-
-        return random_rfc
+        return name_initials + birth_date + disambiguation_code
 
     def elector_code(self, gender: Optional[Literal["H", "M"]] = None) -> str:
         """
