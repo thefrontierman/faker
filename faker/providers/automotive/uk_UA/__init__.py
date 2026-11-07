@@ -199,7 +199,7 @@ class Provider(AutomotiveProvider):
 
     vehicle_categories = ("A1", "A", "B1", "B", "C1", "C", "D1", "D", "BE", "C1E", "CE", "D1E", "DE", "T")
 
-    def __get_random_region_code(self, region_name: Optional[str] = None) -> Tuple[str, str]:
+    def __get_random_region_code(self, region_name: Optional[str] = None) -> tuple[str, str]:
         try:
             if region_name is None:
                 region_name, _ = random.choice(list(self.license_region_data.items()))
