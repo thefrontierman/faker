@@ -20,7 +20,7 @@ class Provider(CreditCardProvider):
         )
     )
 
-    def credit_card_full(self, card_type: Optional[CardType] = None) -> str:
+    def credit_card_full(self, card_type: CardType | None = None) -> str:
         """Generate a full Chinese credit card with details."""
         card = self._credit_card_type(card_type)
         tpl = "{provider}\n{owner}\n{number} {expire_date}\n{security}: {security_nb}\n{issuer}"
