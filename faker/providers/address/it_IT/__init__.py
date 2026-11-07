@@ -17623,7 +17623,7 @@ class Provider(AddressProvider):
         :sample:
         """
         cap = self.postcode()
-        rand_city_prov: List[str] = self.random_element(self.cap_city_province[cap])
+        rand_city_prov: list[str] = self.random_element(self.cap_city_province[cap])
         return cap + ", " + rand_city_prov[0] + " (" + rand_city_prov[1] + ")"
 
     def city(self) -> str:
