@@ -4102,14 +4102,12 @@ class Provider(PersonProvider):
         """
         identity: List[Union[int, str]] = []
 
-        for _ in range(3):
-            identity.append(self.random_letter().upper())
+        identity.extend(self.random_letter().upper() for _ in range(3))
 
         # it will be overwritten by a checksum
         identity.append(0)
 
-        for _ in range(5):
-            identity.append(self.random_digit())
+        identity.extend(self.random_digit() for _ in range(5))
 
         identity[3] = checksum_identity_card_number(identity)
 
@@ -4980,8 +4978,7 @@ class Provider(PersonProvider):
         """
 
         nip = [int(i) for i in self.random_element(self.tax_office_codes)]  # type: ignore
-        for _ in range(6):
-            nip.append(self.random_digit())
+        nip.extend(self.random_digit() for _ in range(6))
 
         weights = (6, 5, 7, 2, 3, 4, 5, 6, 7)
         check_sum = sum(d * w for d, w in zip(nip, weights)) % 11
