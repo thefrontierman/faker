@@ -12,7 +12,7 @@ class Provider(SsnProvider):
         Personal code consists of eleven characters of the form DDMMYYCZZZQ, where
         DDMMYY is the date of birth, C the century sign, ZZZ the individual
         number and Q the control character (checksum). The number for the
-        century is either 0 (1800–1899), 1 (1900–1999), or 2 (2000–2099).
+        century is either 0 (1800-1899), 1 (1900-1999), or 2 (2000-2099).
         """
 
         def _checksum(ssn_without_checksum):
