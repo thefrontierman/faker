@@ -34,7 +34,7 @@ class ISBN13(ISBN):
         """
         weights = (1 if x % 2 == 0 else 3 for x in range(12))
         body = "".join([part for part in [self.ean, self.group, self.registrant, self.publication] if part is not None])
-        remainder = sum(int(b) * w for b, w in zip(body, weights)) % 10
+        remainder = sum(int(b) * w for b, w in zip(body, weights, strict=False)) % 10
         diff = 10 - remainder
         check_digit = 0 if diff == 10 else diff
         return str(check_digit)
@@ -67,7 +67,7 @@ class ISBN10(ISBN):
         """
         weights = range(1, 10)
         body = "".join([part for part in [self.group, self.registrant, self.publication] if part is not None])
-        remainder = sum(int(b) * w for b, w in zip(body, weights)) % 11
+        remainder = sum(int(b) * w for b, w in zip(body, weights, strict=False)) % 11
         check_digit = "X" if remainder == 10 else str(remainder)
         return str(check_digit)
 
