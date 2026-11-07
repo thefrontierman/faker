@@ -17,7 +17,7 @@ class FakerEnum(Enum):
 
 
 class Documentor:
-    def __init__(self, generator: Union[Generator, Faker]) -> None:
+    def __init__(self, generator: Generator | Faker) -> None:
         """
         :param generator: a localized Generator with providers filled,
                           for which to write the documentation
@@ -60,7 +60,7 @@ class Documentor:
                 continue
 
             arguments = []
-            faker_args: List[Union[str, Type[Enum]]] = []
+            faker_args: List[str | Type[Enum]] = []
             faker_kwargs = {}
 
             if name == "binary":
