@@ -505,8 +505,8 @@ class Provider(BaseProvider):
         try:
             import PIL.Image
             import PIL.ImageDraw
-        except ImportError:
-            raise UnsupportedFeature("`image` requires the `Pillow` python library.", "image")
+        except ImportError as err:
+            raise UnsupportedFeature("`image` requires the `Pillow` python library.", "image") from err
 
         width, height = size
         image = PIL.Image.new("RGB", size, self.generator.color(hue=hue, luminosity=luminosity))
@@ -804,8 +804,8 @@ class Provider(BaseProvider):
         """
         try:
             import xmltodict
-        except ImportError:
-            raise UnsupportedFeature("`xml` requires the `xmltodict` Python library.", "xml")
+        except ImportError as err:
+            raise UnsupportedFeature("`xml` requires the `xmltodict` Python library.", "xml") from err
         _dict = self.generator.pydict(
             nb_elements=nb_elements,
             variable_nb_elements=variable_nb_elements,
