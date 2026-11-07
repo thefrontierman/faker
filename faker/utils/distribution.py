@@ -70,20 +70,18 @@ def choices_distribution(
     if hasattr(random, "choices"):
         if length == 1 and p is None:
             return [random.choice(a)]
-        else:
-            return random.choices(a, weights=p, k=length)
-    else:
-        choices = []
+        return random.choices(a, weights=p, k=length)
+    choices = []
 
-        if p is None:
-            p = itertools.repeat(1, len(a))  # type: ignore
+    if p is None:
+        p = itertools.repeat(1, len(a))  # type: ignore
 
-        cdf = list(cumsum(p))  # type: ignore
-        normal = cdf[-1]
-        cdf2 = [i / normal for i in cdf]
-        for _ in range(length):
-            uniform_sample = random_sample(random=random)
-            idx = bisect.bisect_right(cdf2, uniform_sample)
-            item = a[idx]
-            choices.append(item)
-        return choices
+    cdf = list(cumsum(p))  # type: ignore
+    normal = cdf[-1]
+    cdf2 = [i / normal for i in cdf]
+    for _ in range(length):
+        uniform_sample = random_sample(random=random)
+        idx = bisect.bisect_right(cdf2, uniform_sample)
+        item = a[idx]
+        choices.append(item)
+    return choices
