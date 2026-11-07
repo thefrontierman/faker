@@ -31,7 +31,7 @@ class Provider(BaseProvider):
 
         return check_digit
 
-    def ssn(self, birthdate: Optional[date] = None) -> str:
+    def ssn(self, birthdate: date | None = None) -> str:
         """
         Source: https://de.wikipedia.org/wiki/Sozialversicherungsnummer#Berechnung
         :return: a random valid Austrian social security number
