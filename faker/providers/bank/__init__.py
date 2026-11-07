@@ -3,7 +3,7 @@ import string
 
 from math import ceil
 from string import ascii_uppercase
-from typing import Dict, Optional
+from typing import ClassVar, Dict, Optional
 
 from .. import BaseProvider
 
@@ -27,7 +27,7 @@ class Provider(BaseProvider):
     - https://www.theswiftcodes.com/swift-code-checker/
     """
 
-    ALPHA: Dict[str, str] = {c: str(ord(c) % 55) for c in string.ascii_uppercase}
+    ALPHA: ClassVar[Dict[str, str]] = {c: str(ord(c) % 55) for c in string.ascii_uppercase}
     bban_format: str = "????#############"
     country_code: str = "GB"
 
