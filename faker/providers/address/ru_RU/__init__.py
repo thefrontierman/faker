@@ -1558,14 +1558,13 @@ class Provider(AddressProvider):
         regions_suffix: str = self.random_element(self.region_suffixes)
         if regions_suffix == "респ.":
             return f"{regions_suffix} {self.random_element(self.region_republics)}"
-        elif regions_suffix == "край":
+        if regions_suffix == "край":
             return f"{self.random_element(self.region_krai)} {regions_suffix}"
-        elif regions_suffix == "обл.":
+        if regions_suffix == "обл.":
             return f"{self.random_element(self.region_oblast)} {regions_suffix}"
-        elif regions_suffix == "АО":
+        if regions_suffix == "АО":
             return f"{self.random_element(self.region_ao)} {regions_suffix}"
-        else:
-            raise ValueError(f'Unknown region "{regions_suffix}"')
+        raise ValueError(f'Unknown region "{regions_suffix}"')
 
     region = administrative_unit
 
