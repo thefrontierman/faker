@@ -38,8 +38,7 @@ class Provider(CompanyProvider):
                 raise ValueError("Checksum 1 is invalid")
             if sum_ % 11 == 0:
                 return "0"
-            else:
-                return str(11 - sum_ % 11)
+            return str(11 - sum_ % 11)
 
         while True:
             first_digit = str(self.random_digit_not_null())
