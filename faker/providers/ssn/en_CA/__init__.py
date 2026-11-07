@@ -52,7 +52,7 @@ class Provider(SsnProvider):
         # series, 8 is reserved for business numbers and 0 for CRA individual
         # tax numbers, so neither can lead a personal SIN.
         first_digit = self.generator.random.randint(1, 7)
-        digits = [first_digit] + self.generator.random.sample([digit for digit in range(9) if digit != first_digit], 7)
+        digits = [first_digit, *self.generator.random.sample([digit for digit in range(9) if digit != first_digit], 7)]
 
         # The final step of the validation requires that all of the
         # digits sum to a multiple of 10. First, sum the first 8 and
