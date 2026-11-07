@@ -74,7 +74,7 @@ class Provider(SsnProvider):
 
         # Build the resulting SIN string.
         sin = ""
-        for i in range(0, len(digits)):
+        for i in range(len(digits)):
             sin += str(digits[i])
             # Add a space to make it conform to Canadian formatting.
             if i in (2, 5):
