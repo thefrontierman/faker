@@ -1,5 +1,4 @@
 from string import ascii_uppercase
-from typing import List
 
 from .. import Provider as AutomotiveProvider
 
@@ -30,7 +29,7 @@ class Provider(AutomotiveProvider):
     ]
     license_formats = motorcycle_license_formats + automobile_license_formats
 
-    def _license_plate(self, license_format: List[str]) -> str:
+    def _license_plate(self, license_format: list[str]) -> str:
         return self.bothify(self.random_element(license_format), ascii_uppercase)
 
     def protocol_license_plate(self) -> str:
