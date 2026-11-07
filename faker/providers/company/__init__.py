@@ -1,5 +1,3 @@
-from typing import Tuple
-
 from .. import BaseProvider, ElementsType
 
 localized = True
@@ -14,7 +12,7 @@ class Provider(BaseProvider):
 
     company_suffixes: ElementsType[str] = ("Inc", "and Sons", "LLC", "Group", "PLC", "Ltd")
 
-    catch_phrase_words: Tuple[ElementsType[str], ...] = (
+    catch_phrase_words: tuple[ElementsType[str], ...] = (
         (
             "Adaptive",
             "Advanced",
@@ -328,7 +326,7 @@ class Provider(BaseProvider):
         ),
     )
 
-    bsWords: Tuple[ElementsType[str], ...] = (
+    bsWords: tuple[ElementsType[str], ...] = (
         (
             "implement",
             "utilize",
