@@ -57,7 +57,7 @@ class Provider(CompanyProvider):
         "en toute sécurité",
     )
 
-    company_suffixes: Tuple[str, ...] = (
+    company_suffixes: tuple[str, ...] = (
         "SA",
         "S.A.",
         "SARL",
