@@ -6,4 +6,3 @@ class Provider(GermanProvider):
     Using the same as in ```de_DE```.
     """
 
-    pass
