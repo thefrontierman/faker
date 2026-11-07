@@ -8,7 +8,7 @@ def ssn_checksum(number: str) -> int:
     Calculate the checksum for the romanian SSN (CNP).
     """
     weights = (2, 7, 9, 1, 4, 6, 3, 5, 8, 2, 7, 9)
-    check = sum(w * int(n) for w, n in zip(weights, number)) % 11
+    check = sum(w * int(n) for w, n in zip(weights, number, strict=False)) % 11
     return 1 if check == 10 else check
 
 
@@ -18,7 +18,7 @@ def vat_checksum(number: str) -> int:
     """
     weights = (7, 5, 3, 2, 1, 7, 5, 3, 2)
     number = (9 - len(number)) * "0" + number
-    check = 10 * sum(w * int(n) for w, n in zip(weights, number))
+    check = 10 * sum(w * int(n) for w, n in zip(weights, number, strict=False))
     return check % 11 % 10
 
 
