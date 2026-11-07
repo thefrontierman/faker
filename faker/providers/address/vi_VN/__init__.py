@@ -1,6 +1,6 @@
 """This module provides address-related functionalities for Vietnamese addresses."""
 
-from typing import Optional, Tuple
+from typing import ClassVar, Dict, Optional, Tuple
 
 from .. import Provider as AddressProvider
 
@@ -282,7 +282,7 @@ class Provider(AddressProvider):
         "VL",
     )
 
-    provinces_postcode = {
+    provinces_postcode: ClassVar[Dict[str, Tuple[Tuple[int, int], ...]]] = {
         "AG": ((90000, 90999), (91000, 91999), (92000, 92999)),
         "BN": ((16000, 16999), (26000, 26999)),
         "CM": ((97000, 97999), (98000, 98999)),
