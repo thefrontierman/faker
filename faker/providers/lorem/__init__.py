@@ -153,7 +153,7 @@ class Provider(BaseProvider):
         :sample: nb=5
         :sample: nb=5, ext_word_list=['abc', 'def', 'ghi', 'jkl']
         """
-        return [self.sentence(ext_word_list=ext_word_list) for _ in range(0, nb)]
+        return [self.sentence(ext_word_list=ext_word_list) for _ in range(nb)]
 
     def paragraph(
         self, nb_sentences: int = 3, variable_nb_sentences: bool = True, ext_word_list: Optional[Sequence[str]] = None
@@ -197,7 +197,7 @@ class Provider(BaseProvider):
         :sample: nb=5
         :sample: nb=5, ext_word_list=['abc', 'def', 'ghi', 'jkl']
         """
-        return [self.paragraph(ext_word_list=ext_word_list) for _ in range(0, nb)]
+        return [self.paragraph(ext_word_list=ext_word_list) for _ in range(nb)]
 
     def text(self, max_nb_chars: int = 200, ext_word_list: Optional[Sequence[str]] = None) -> str:
         """Generate a text string.
@@ -276,4 +276,4 @@ class Provider(BaseProvider):
         :sample: nb_texts=5, max_nb_chars=50,
                  ext_word_list=['abc', 'def', 'ghi', 'jkl']
         """
-        return [self.text(max_nb_chars, ext_word_list) for _ in range(0, nb_texts)]
+        return [self.text(max_nb_chars, ext_word_list) for _ in range(nb_texts)]
