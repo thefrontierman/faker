@@ -22,7 +22,7 @@ def calculate_day_count(birthday: date) -> int:
 def calculate_check_sum(val: str) -> int:
     """Calculate checksum using INN calculation method."""
     weights = [-1, 5, 7, 9, 4, 6, 10, 5, 7]
-    checksum = sum(int(v) * w for v, w in zip(val, weights))
+    checksum = sum(int(v) * w for v, w in zip(val, weights, strict=False))
 
     return checksum % 11 % 10
 
