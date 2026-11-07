@@ -31,9 +31,8 @@ class Provider(SsnProvider):
                 break
 
         # build the resulting BSN
-        bsn = "".join([str(e) for e in digits])
         # finally return our random but valid BSN
-        return bsn
+        return "".join([str(e) for e in digits])
 
     vat_id_formats = ("NL#########B##",)
 
