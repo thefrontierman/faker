@@ -87,7 +87,7 @@ class Provider(CreditCardProvider):
         )
     )
 
-    def credit_card_full(self, card_type: Optional[CardType] = None) -> str:
+    def credit_card_full(self, card_type: CardType | None = None) -> str:
         """Generate a set of credit card details."""
         card = self._credit_card_type(card_type)
 
