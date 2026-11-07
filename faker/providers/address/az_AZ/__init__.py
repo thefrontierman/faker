@@ -685,7 +685,7 @@ class Provider(AddressProvider):
         :example: 'AZ1027'
         """
         index = self.generator.random.randint(900, 6600)
-        return "AZ%04d" % index if index > 999 else "AZ0%03d" % index
+        return "AZ{:04d}".format(index) if index > 999 else "AZ0{:03d}".format(index)
 
     def postalcode(self) -> str:
         return self.postcode()
