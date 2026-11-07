@@ -11,7 +11,7 @@ class Provider(BaseProvider):
         "CZ##########",
     )
 
-    national_id_months: List[str] = ["%.2d" % i for i in range(1, 13)] + ["%.2d" % i for i in range(51, 63)]
+    national_id_months: List[str] = [f"{i:02d}" for i in range(1, 13)] + [f"{i:02d}" for i in range(51, 63)]
 
     def vat_id(self) -> str:
         """
