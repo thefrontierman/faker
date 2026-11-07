@@ -45,7 +45,9 @@ class Provider(BaseProvider):
             return f"GBHA{self.random_int(min=500, max=999):03d}"
 
         body = self.numerify("#######")
-        total = sum(int(digit) * weight for digit, weight in zip(body, range(8, 1, -1)))
+        total = sum(
+            int(digit) * weight for digit, weight in zip(body, range(8, 1, -1), strict=True)
+        )
         check_digits = (-total) % 97
 
         number = f"GB{body[:3]} {body[3:]} {check_digits:02d}"
