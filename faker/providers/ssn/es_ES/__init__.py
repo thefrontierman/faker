@@ -111,10 +111,10 @@ class Provider(BaseProvider):
 
         if first_chr in ["F", "J", "K", "N", "P", "Q", "R", "S", "U", "V", "W"]:
             return chr(64 + sum_)
-        elif first_chr in ["A", "B", "C", "D", "E", "F", "G", "H", "L", "M"]:
+        if first_chr in ["A", "B", "C", "D", "E", "F", "G", "H", "L", "M"]:
             if sum_ == 10:
                 sum_ = 0
             return str(sum_)
-        else:  # K, L, M  # pragma: no cover
-            # Old format that is no longer used, here for full compatability
-            return cls._calculate_control_doi(cif)  # pragma: no cover
+        # K, L, M  # pragma: no cover
+        # Old format that is no longer used, here for full compatability
+        return cls._calculate_control_doi(cif)  # pragma: no cover
