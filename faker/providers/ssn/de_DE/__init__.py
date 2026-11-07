@@ -69,7 +69,7 @@ class Provider(BaseProvider):
         base = str(self.random_digit_not_null()) + self.numerify("#######")
         return "DE" + base + self.__get_vat_checkdigit(base)
 
-    def rvnr(self, birthdate: Optional[date] = None) -> str:
+    def rvnr(self, birthdate: date | None = None) -> str:
         """
         Pension insurance number (German: "Rentenversicherungsnummer", abbr. "RVNR")
 
