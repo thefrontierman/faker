@@ -17,7 +17,7 @@ class Provider(SsnProvider):
 
         def _checksum(ssn_without_checksum):
             weights = [1, 6, 3, 7, 9, 10, 5, 8, 4, 2]
-            weighted_sum = sum(int(digit) * weight for digit, weight in zip(ssn_without_checksum, weights))
+            weighted_sum = sum(int(digit) * weight for digit, weight in zip(ssn_without_checksum, weights, strict=False))
             reminder = (1 - weighted_sum) % 11
             if reminder == 10:
                 return 0
