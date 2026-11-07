@@ -10,7 +10,7 @@ def regon_checksum(digits: List[int]) -> int:
     weights_for_check_digit = [8, 9, 2, 3, 4, 5, 6, 7]
     check_digit = 0
 
-    for i in range(0, 8):
+    for i in range(8):
         check_digit += weights_for_check_digit[i] * digits[i]
 
     check_digit %= 11
@@ -28,7 +28,7 @@ def local_regon_checksum(digits: List[int]) -> int:
     weights_for_check_digit = [2, 4, 8, 5, 0, 9, 7, 3, 6, 1, 2, 4, 8]
     check_digit = 0
 
-    for i in range(0, 13):
+    for i in range(13):
         check_digit += weights_for_check_digit[i] * digits[i]
 
     check_digit %= 11
@@ -46,7 +46,7 @@ def company_vat_checksum(digits: List[int]) -> int:
     weights_for_check_digit = [6, 5, 7, 2, 3, 4, 5, 6, 7]
     check_digit = 0
 
-    for i in range(0, 9):
+    for i in range(9):
         check_digit += weights_for_check_digit[i] * digits[i]
 
     check_digit %= 11
