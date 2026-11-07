@@ -178,7 +178,7 @@ class Provider(AutomotiveProvider):
         """Return the official name of a random federal entity."""
         return self.license_plate_states[self.license_plate_state_abbr()]
 
-    def license_plate_by_state(self, state_abbr: Optional[str] = None) -> str:
+    def license_plate_by_state(self, state_abbr: str | None = None) -> str:
         """Generate a license plate prefixed with a federal entity code.
 
         If a value for ``state_abbr`` is provided it is used as the prefix
