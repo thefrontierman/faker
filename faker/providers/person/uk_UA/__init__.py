@@ -1326,7 +1326,7 @@ class Provider(PersonProvider):
         :sample: gender='F'
         :sample: gender='M'
         :sample: short=True
-        """
+        """  # noqa: RUF002
         if gender and gender not in ("M", "F"):
             raise ValueError('Gender must be "m" or "f" or None')
 
