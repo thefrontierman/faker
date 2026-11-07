@@ -524,4 +524,4 @@ class Provider(LoremProvider):
         "überall",
     )
 
-    parts_of_speech: Dict[str, tuple] = {}
+    parts_of_speech: dict[str, tuple] = {}
