@@ -388,7 +388,7 @@ class Provider(CompanyProvider):
         checksum = (12 + 3 * (siren_int % 97)) % 97
         return f"FR {checksum:02} {siren}"
 
-    def ape_code(self, version: Optional[str] = "naf-2003") -> str:
+    def ape_code(self, version: str | None = "naf-2003") -> str:
         """
         Generate an APE code (also known as NAF code).
         It identify french company main branch of activity.
