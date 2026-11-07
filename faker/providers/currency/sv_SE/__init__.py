@@ -148,7 +148,7 @@ class Provider(CurrencyProvider):
         ("TJS", "Somoni"),
         ("TMT", "Turkmenistansk Ny Manat"),
         ("TND", "Tunisisk Dinar"),
-        ("TOP", "Pa’anga"),
+        ("TOP", "Pa\u2019anga"),
         ("TRY", "Turkisk Lira"),
         ("TTD", "Trinidad och Tobago Dollar"),
         ("TWD", "Ny Taiwanesisk Dollar"),
