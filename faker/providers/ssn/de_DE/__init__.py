@@ -107,6 +107,4 @@ class Provider(BaseProvider):
         kvnr = kvnr + str(kvnr_checkdigit)
 
         letter: str = ascii_uppercase[int(letter_number) - 1]
-        kvnr = letter + kvnr[2:]
-
-        return kvnr
+        return letter + kvnr[2:]
