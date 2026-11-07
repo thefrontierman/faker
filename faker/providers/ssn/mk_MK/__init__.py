@@ -25,7 +25,7 @@ class Provider(SsnProvider):
     @staticmethod
     def _checksum(digits: list) -> int:
         weights = [7, 6, 5, 4, 3, 2, 7, 6, 5, 4, 3, 2]
-        total = sum(w * d for w, d in zip(weights, digits))
+        total = sum(w * d for w, d in zip(weights, digits, strict=False))
         remainder = 11 - (total % 11)
         if remainder in (10, 11):
             return 0
