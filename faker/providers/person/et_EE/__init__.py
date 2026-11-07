@@ -31,8 +31,8 @@ class Provider(PersonProvider):
     )
 
     prefixes_neutral = ("doktor", "dr", "prof")
-    prefixes_male = ("härra", "hr") + prefixes_neutral
-    prefixes_female = ("proua", "pr") + prefixes_neutral
+    prefixes_male = ("härra", "hr", *prefixes_neutral)
+    prefixes_female = ("proua", "pr", *prefixes_neutral)
     prefixes = sorted(set(prefixes_male + prefixes_female))
 
     suffixes = ("PhD", "MSc", "BSc")
