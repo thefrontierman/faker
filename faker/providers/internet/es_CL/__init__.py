@@ -1,5 +1,3 @@
-from typing import List
-
 from faker.utils.decorators import lowercase, slugify_unicode
 
 from .. import Provider as InternetProvider
@@ -28,7 +26,7 @@ class Provider(InternetProvider):
     @slugify_unicode
     def domain_word(self) -> str:
         company: str = self.generator.format("company")
-        company_elements: List[str] = company.split(" ")
+        company_elements: list[str] = company.split(" ")
         # select 2 items as companies include prefix
         name_items = company_elements[:2]
         return self._to_ascii("".join(name_items))
