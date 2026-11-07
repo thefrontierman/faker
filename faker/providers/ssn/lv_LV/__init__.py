@@ -21,7 +21,7 @@ class Provider(SsnProvider):
             reminder = (1 - weighted_sum) % 11
             if reminder == 10:
                 return 0
-            elif reminder < -1:
+            if reminder < -1:
                 return reminder + 11
             return reminder
 
