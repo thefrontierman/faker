@@ -101,7 +101,7 @@ class Provider(BaseProvider):
 
     def swift(
         self,
-        length: Optional[int] = None,
+        length: int | None = None,
         primary: bool = False,
         use_dataset: bool = False,
     ) -> str:
