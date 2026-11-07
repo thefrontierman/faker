@@ -38,7 +38,7 @@ class Provider(SsnProvider):
             remainder = 11 - (sum(map(lambda x, y: int(x) * int(y), code, digits)) % 11)
             if remainder == 10:
                 return 0
-            elif remainder == 11:
+            if remainder == 11:
                 return 5
             return remainder
 
