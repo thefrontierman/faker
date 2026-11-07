@@ -101,7 +101,7 @@ class Provider(BarcodeProvider):
         if m1:
             upc_e = upc_e_template.format(**m1.groupdict())
         elif m2:
-            groupdict: Dict[str, str] = m2.groupdict()
+            groupdict: dict[str, str] = m2.groupdict()
             mfr_code = groupdict.get("mfr_code") or ""
             groupdict["extra"] = str(len(mfr_code))
             upc_e = upc_e_template.format(**groupdict)
