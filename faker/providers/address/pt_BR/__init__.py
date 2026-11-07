@@ -883,7 +883,7 @@ class Provider(AddressProvider):
         """
         return self.random_element(self.street_prefixes)
 
-    def estado(self) -> Tuple[str, str]:
+    def estado(self) -> tuple[str, str]:
         """
         Randomly returns a Brazilian State  ('sigla' , 'nome').
         :example: ('MG' . 'Minas Gerais')
