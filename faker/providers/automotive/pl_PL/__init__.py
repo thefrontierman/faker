@@ -1,5 +1,3 @@
-from typing import List
-
 from .. import Provider as AutomotiveProvider
 
 
@@ -28,7 +26,7 @@ class Provider(AutomotiveProvider):
         "??? ###??",
     )
 
-    def license_plate_regex_formats(self) -> List[str]:
+    def license_plate_regex_formats(self) -> list[str]:
         """Return a regex for matching license plates.
 
         .. warning::
