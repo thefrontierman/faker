@@ -133,7 +133,7 @@ class SampleCodeValidator(ast.NodeVisitor):
     def visit(self, node):
         # Check if code element type is allowed
         if not self._is_whitelisted(node):
-            msg = "Code element `%s` is not allowed." % node.__class__.__name__
+            msg = f"Code element `{node.__class__.__name__}` is not allowed."
             self._log_error(msg)
 
         return super().visit(node)
