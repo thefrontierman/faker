@@ -1,10 +1,10 @@
-from typing import Tuple, Union
+from typing import Tuple
 
 from .. import BaseProvider
 
 localized = True
 
-PrefixType = Tuple[Union[int, str, Tuple[Union[int, str], ...]], ...]
+PrefixType = Tuple[int | str | Tuple[int | str, ...], ...]
 
 
 class Provider(BaseProvider):
