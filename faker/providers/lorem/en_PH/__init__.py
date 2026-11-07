@@ -1,5 +1,3 @@
-from typing import List
-
 from ..en_US import Provider as EnUsProvider
 from ..la import Provider as LoremProvider
 
@@ -26,7 +24,7 @@ class Provider(LoremProvider):
         """Generate an English word."""
         return self.word(ext_word_list=self.english_word_list)
 
-    def english_words(self, nb: int = 3, unique: bool = False) -> List[str]:
+    def english_words(self, nb: int = 3, unique: bool = False) -> list[str]:
         """Generate a list of English words.
 
         :sample: nb=5
@@ -45,7 +43,7 @@ class Provider(LoremProvider):
         """
         return self.sentence(nb_words, variable_nb_words, self.english_word_list)
 
-    def english_sentences(self, nb: int = 3) -> List[str]:
+    def english_sentences(self, nb: int = 3) -> list[str]:
         """Generate a list of sentences in English.
 
         :sample: nb=5
@@ -60,7 +58,7 @@ class Provider(LoremProvider):
         """
         return self.paragraph(nb_sentences, variable_nb_sentences, self.english_word_list)
 
-    def english_paragraphs(self, nb: int = 3) -> List[str]:
+    def english_paragraphs(self, nb: int = 3) -> list[str]:
         """Generate a list of paragraphs in English.
 
         :sample: nb=5
@@ -76,7 +74,7 @@ class Provider(LoremProvider):
         """
         return self.text(max_nb_chars, self.english_word_list)
 
-    def english_texts(self, nb_texts: int = 3, max_nb_chars: int = 200) -> List[str]:
+    def english_texts(self, nb_texts: int = 3, max_nb_chars: int = 200) -> list[str]:
         """Generate a list of text strings in English.
 
         :sample: nb_texts=5
