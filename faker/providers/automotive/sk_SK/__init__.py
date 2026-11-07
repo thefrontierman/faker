@@ -1,5 +1,7 @@
 import string
 
+from typing import ClassVar, List
+
 from .. import Provider as AutomotiveProvider
 
 
@@ -11,7 +13,7 @@ class Provider(AutomotiveProvider):
     - https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Slovakia
     """
 
-    license_plate_prefix = [
+    license_plate_prefix: ClassVar[List[str]] = [
         "BA",
         "BL",
         "BT",  # Bratislava
