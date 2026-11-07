@@ -7,14 +7,14 @@ def translate_to_bengali_digits(en_digit: str = "0") -> str:
     :example: '9786' to '৯৭৮৬'
     """
     english_to_bengali_digits_map = {
-        "0": "০",
+        "0": "\u09e6",
         "1": "১",
         "2": "২",
         "3": "৩",
-        "4": "৪",
+        "4": "\u09ea",
         "5": "৫",
         "6": "৬",
-        "7": "৭",
+        "7": "\u09ed",
         "8": "৮",
         "9": "৯",
     }
