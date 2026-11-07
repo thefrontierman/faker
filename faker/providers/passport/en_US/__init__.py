@@ -90,8 +90,7 @@ class Provider(PassportProvider):
         given_name, surname = self.passport_owner(gender=gender_g)
         number = self.passport_number()
 
-        full_rep = """{first_name}\n{second_name}\n{gender}\n{dob}\n{issue}\n{expire}\n{num}\n"""
-        full_rep = full_rep.format(
+        return """{first_name}\n{second_name}\n{gender}\n{dob}\n{issue}\n{expire}\n{num}\n""".format(
             first_name=given_name,
             second_name=surname,
             gender=gender_g,
@@ -100,4 +99,3 @@ class Provider(PassportProvider):
             expire=expiry_date,
             num=number,
         )
-        return full_rep
