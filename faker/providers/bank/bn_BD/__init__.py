@@ -1,5 +1,3 @@
-from typing import Optional
-
 from .. import Provider as BankProvider
 
 
@@ -79,5 +77,5 @@ class Provider(BankProvider):
     def swift11(self, primary: bool = False, use_dataset: bool = True) -> str:
         return super(self.__class__, self).swift11(primary=primary, use_dataset=use_dataset)
 
-    def swift(self, length: Optional[int] = None, primary: bool = False, use_dataset: bool = True) -> str:
+    def swift(self, length: int | None = None, primary: bool = False, use_dataset: bool = True) -> str:
         return super(self.__class__, self).swift(length=length, primary=primary, use_dataset=use_dataset)
