@@ -1,5 +1,3 @@
-from typing import Tuple
-
 from .. import Provider as AddressProvider
 
 
@@ -7,7 +5,7 @@ class Provider(AddressProvider):
     """Address provider for fr_DZ locale."""
 
     # Source: https://fr.wikipedia.org/wiki/Wilayas_d%27Alg%C3%A9rie
-    wilayas: Tuple[str, ...] = (
+    wilayas: tuple[str, ...] = (
         "Adrar",
         "Chlef",
         "Laghouat",
@@ -69,7 +67,7 @@ class Provider(AddressProvider):
     )
 
     # Source: https://github.com/othmanus/algeria-cities
-    cities: Tuple[str, ...] = (
+    cities: tuple[str, ...] = (
         # Wilaya 01 - Adrar
         "Adrar",
         "Reggane",
@@ -313,29 +311,29 @@ class Provider(AddressProvider):
         "El Menia",
     )
 
-    street_prefixes: Tuple[str, ...] = (
+    street_prefixes: tuple[str, ...] = (
         "rue",
         "avenue",
         "boulevard",
         "chemin",
     )
 
-    building_number_formats: Tuple[str, ...] = ("%", "%#", "%#", "%##")
+    building_number_formats: tuple[str, ...] = ("%", "%#", "%#", "%##")
 
-    postcode_formats: Tuple[str, ...] = tuple(f"{i:02d}###" for i in range(1, 49))
+    postcode_formats: tuple[str, ...] = tuple(f"{i:02d}###" for i in range(1, 49))
 
-    street_name_formats: Tuple[str, ...] = (
+    street_name_formats: tuple[str, ...] = (
         "{{street_prefix}} {{last_name}}",
         "{{street_prefix}} {{first_name}} {{last_name}}",
         "{{street_prefix}} de {{last_name}}",
     )
 
-    street_address_formats: Tuple[str, ...] = (
+    street_address_formats: tuple[str, ...] = (
         "{{building_number}} {{street_name}}",
         "{{building_number}}, {{street_name}}",
     )
 
-    address_formats: Tuple[str, ...] = (
+    address_formats: tuple[str, ...] = (
         "{{street_address}} {{city}}",
         "{{street_address}} - {{city}}",
         "{{street_address}} {{city}}, {{administrative_unit}}",
