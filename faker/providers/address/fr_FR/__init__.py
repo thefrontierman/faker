@@ -445,7 +445,7 @@ class Provider(AddressProvider):
 
     region = administrative_unit
 
-    def department(self) -> Tuple[str, str]:
+    def department(self) -> tuple[str, str]:
         """
         Randomly returns a french department ('departmentNumber' , 'departmentName').
         :example: ('2B' . 'Haute-Corse')
