@@ -34,9 +34,7 @@ def checksum(sin):
     # with the first eight values, results in a value divisible by 10
 
     check_digit = 10 - (sum(checksumCollection) % 10)
-    check_digit = 0 if check_digit == 10 else check_digit
-
-    return check_digit
+    return 0 if check_digit == 10 else check_digit
 
 
 class Provider(SsnProvider):
