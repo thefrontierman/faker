@@ -775,7 +775,7 @@ class Provider(AddressProvider):
     )
 
     # From https://pt.wikipedia.org/wiki/Lista_de_freguesias_de_Portugal
-    freguesias = [
+    freguesias = (
         "Abrantes",
         "Águeda",
         "Aguiar da Beira",
@@ -1084,7 +1084,7 @@ class Provider(AddressProvider):
         "Viseu",
         "Vizela",
         "Vouzela",
-    ]
+    )
 
     # from https://pt.wikipedia.org/wiki/Lista_de_arruamentos_de_Lisboa
     # and https://pt.wikipedia.org/wiki/Lista_de_arruamentos_do_Porto
