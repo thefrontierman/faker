@@ -12,8 +12,7 @@ def checksum_identity_card_number(characters: Sequence[Union[str, int]]) -> int:
     integer_characters = [
         (ord(character) - 55) if isinstance(character, str) else character for character in characters
     ]
-    check_digit = sum(weight * ch for weight, ch in zip(weights_for_check_digit, integer_characters)) % 10
-    return check_digit
+    return sum(weight * ch for weight, ch in zip(weights_for_check_digit, integer_characters)) % 10
 
 
 class Provider(PersonProvider):
