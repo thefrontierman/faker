@@ -1,4 +1,4 @@
-from typing import List
+from typing import ClassVar, Dict, List
 
 from .. import Provider as AddressProvider
 
@@ -9,7 +9,7 @@ def getcities(fulldict):
 
 class Provider(AddressProvider):
     # Converted from: https://download.geonames.org/export/zip/IT.zip
-    cap_city_province = {
+    cap_city_province: ClassVar[Dict[str, List[List[str]]]] = {
         "67010": [["Barete", "AQ"]],
         "67012": [["San Giovanni", "AQ"], ["Cagnano Amiterno", "AQ"]],
         "67013": [["Mascioni", "AQ"], ["Campotosto", "AQ"], ["Ortolano", "AQ"], ["Poggio Cancelli", "AQ"]],
