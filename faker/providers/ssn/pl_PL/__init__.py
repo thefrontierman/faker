@@ -11,7 +11,7 @@ def checksum(digits: List[int]) -> int:
     weights_for_check_digit = [9, 7, 3, 1, 9, 7, 3, 1, 9, 7]
     check_digit = 0
 
-    for i in range(0, 10):
+    for i in range(10):
         check_digit += weights_for_check_digit[i] * digits[i]
 
     check_digit %= 10
