@@ -7,4 +7,3 @@ class Provider(BarcodeProvider):
     There is no difference from the ``en_CA`` implementation.
     """
 
-    pass
