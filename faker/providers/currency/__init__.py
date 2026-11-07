@@ -401,7 +401,7 @@ class Provider(BaseProvider):
     def currency_name(self) -> str:
         return self.currency()[1]
 
-    def currency_symbol(self, code: Optional[str] = None) -> str:
+    def currency_symbol(self, code: str | None = None) -> str:
         """
         :example: $
         """
