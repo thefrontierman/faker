@@ -12,7 +12,7 @@ def checksum(digits: List[int]) -> int:
     """
     s = 0
     p = len(digits) + 1
-    for i in range(0, len(digits)):
+    for i in range(len(digits)):
         s += digits[i] * p
         p -= 1
 
