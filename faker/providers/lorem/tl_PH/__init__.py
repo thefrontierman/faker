@@ -10,4 +10,3 @@ class Provider(FilPhProvider):
         :meth:`FilPhLoremProvider <faker.providers.lorem.fil_PH.Provider>`
     """
 
-    pass
