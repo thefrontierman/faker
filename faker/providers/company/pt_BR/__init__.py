@@ -11,12 +11,12 @@ def company_id_checksum(values: List[int]) -> List[int]:
     digits = list(values)
     weights = 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2
 
-    dv = sum(w * d for w, d in zip(weights[1:], digits))
+    dv = sum(w * d for w, d in zip(weights[1:], digits, strict=False))
     dv = (11 - dv) % 11
     dv = 0 if dv >= 10 else dv
     digits.append(dv)
 
-    dv2 = sum(w * d for w, d in zip(weights, digits))
+    dv2 = sum(w * d for w, d in zip(weights, digits, strict=False))
     dv2 = (11 - dv2) % 11
     dv2 = 0 if dv2 >= 10 else dv2
     digits.append(dv2)
