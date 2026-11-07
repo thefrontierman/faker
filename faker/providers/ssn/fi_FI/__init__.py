@@ -37,8 +37,7 @@ class Provider(SsnProvider):
         suffix = str(self.generator.random.randrange(*range)).zfill(3)
         checksum = _checksum(hetu_date + suffix)
         separator = self._get_century_code(birthday.year)
-        hetu = "".join([hetu_date, separator, suffix, checksum])
-        return hetu
+        return "".join([hetu_date, separator, suffix, checksum])
 
     @staticmethod
     def _get_century_code(year: int) -> str:
