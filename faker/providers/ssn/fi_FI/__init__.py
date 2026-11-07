@@ -13,7 +13,7 @@ class Provider(SsnProvider):
         HETU consists of eleven characters of the form DDMMYYCZZZQ, where
         DDMMYY is the date of birth, C the century sign, ZZZ the individual
         number and Q the control character (checksum). The sign for the
-        century is either + (1800–1899), - (1900–1999), or A (2000–2099).
+        century is either + (1800-1899), - (1900-1999), or A (2000-2099).
         The individual number ZZZ is odd for males and even for females.
         For people born in Finland its range is 002-899
         (larger numbers may be used in special cases).
