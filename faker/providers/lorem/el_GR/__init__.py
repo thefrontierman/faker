@@ -392,4 +392,4 @@ class Provider(LoremProvider):
         "ώρα",
     )
 
-    parts_of_speech: Dict[str, tuple] = {}
+    parts_of_speech: dict[str, tuple] = {}
