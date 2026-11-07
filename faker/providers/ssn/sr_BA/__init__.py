@@ -14,7 +14,7 @@ def calculate_checksum(ssn_without_checksum: str) -> Optional[int]:
     weights = (7, 6, 5, 4, 3, 2, 7, 6, 5, 4, 3, 2)
     digits = [int(char) for char in ssn_without_checksum]
 
-    weighted_sum = sum(weight * digit for weight, digit in zip(weights, digits))
+    weighted_sum = sum(weight * digit for weight, digit in zip(weights, digits, strict=False))
     remainder = weighted_sum % 11
 
     if remainder == 0:
