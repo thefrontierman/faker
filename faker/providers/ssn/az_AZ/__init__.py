@@ -35,5 +35,4 @@ class Provider(SsnProvider):
     all_characters = characters + numbers
 
     def ssn(self) -> str:
-        ssn = "".join(self.random_elements(elements=self.all_characters, length=7))
-        return ssn
+        return "".join(self.random_elements(elements=self.all_characters, length=7))
