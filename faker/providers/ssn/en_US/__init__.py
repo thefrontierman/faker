@@ -210,11 +210,11 @@ class Provider(BaseProvider):
 
         if taxpayer_identification_number_type == self.ITIN_TYPE:
             return self.itin()
-        elif taxpayer_identification_number_type == self.EIN_TYPE:
+        if taxpayer_identification_number_type == self.EIN_TYPE:
             return self.ein()
-        elif taxpayer_identification_number_type == self.INVALID_SSN_TYPE:
+        if taxpayer_identification_number_type == self.INVALID_SSN_TYPE:
             return self.invalid_ssn()
-        elif taxpayer_identification_number_type == self.SSN_TYPE:
+        if taxpayer_identification_number_type == self.SSN_TYPE:
             # Certain numbers are invalid for United States Social Security
             # Numbers. The area (first 3 digits) cannot be 666 or 900-999.
             # The group number (middle digits) cannot be 00. The serial
@@ -229,7 +229,6 @@ class Provider(BaseProvider):
             ssn = f"{area:03d}-{group:02d}-{serial:04d}"
             return ssn
 
-        else:
-            raise ValueError(
-                "taxpayer_identification_number_type must be one of 'SSN', 'EIN', 'ITIN', or 'INVALID_SSN'."
-            )
+        raise ValueError(
+            "taxpayer_identification_number_type must be one of 'SSN', 'EIN', 'ITIN', or 'INVALID_SSN'."
+        )
