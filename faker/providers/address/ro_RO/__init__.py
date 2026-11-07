@@ -1,5 +1,3 @@
-from typing import Tuple
-
 from .. import Provider as AddressProvider
 
 
@@ -360,7 +358,7 @@ class Provider(AddressProvider):
         "Tunari",
     )
 
-    states: Tuple[Tuple[str, str], ...] = (
+    states: tuple[tuple[str, str], ...] = (
         ("AB", "Alba"),
         ("AG", "Argeș"),
         ("AR", "Arad"),
