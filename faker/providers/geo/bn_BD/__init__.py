@@ -984,6 +984,6 @@ class Provider(GeoProvider):
         ("-24.19436", "29.00974", "মোকোপানে", "ZA", "আফ্রিকা/জোহানেসবার্গ"),
     )
 
-    def local_latlng(self, country_code: str = "BD", coords_only: bool = False) -> Optional[Tuple[str, ...]]:
+    def local_latlng(self, country_code: str = "BD", coords_only: bool = False) -> Tuple[str, ...] | None:
         """Set Bangladesh BD as country code."""
         return super(self.__class__, self).local_latlng(country_code=country_code, coords_only=coords_only)
