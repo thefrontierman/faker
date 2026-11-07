@@ -2277,9 +2277,9 @@ class Provider(PersonProvider):
     # Degrees from
     degrees = ("JUDr.", "Ing.", "Bc.", "Mgr.", "MUDr.", "RNDr.", "Ing. arch.", "MVDr.", "PhDr.")
 
-    prefixes_male = ("pán",) + degrees
+    prefixes_male = ("pán", *degrees)
 
-    prefixes_female = ("pani", "slečna") + degrees
+    prefixes_female = ("pani", "slečna", *degrees)
 
     suffixes = (
         "CSc.",
