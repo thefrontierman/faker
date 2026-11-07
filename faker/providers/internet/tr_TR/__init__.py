@@ -13,7 +13,7 @@ class Provider(InternetProvider):
     tlds = ("com", "net", "org", "tr")
 
     replacements = (
-        ("ı", "i"),
+        ("ı", "i"),  # noqa: RUF001 - intentional Turkish dotless i for transliteration
         ("ğ", "g"),
         ("ü", "u"),
         ("ş", "s"),
