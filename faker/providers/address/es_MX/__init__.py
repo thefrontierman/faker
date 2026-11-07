@@ -1,4 +1,5 @@
 from collections import OrderedDict
+from typing import ClassVar
 
 from ..es import Provider as AddressProvider
 
@@ -70,7 +71,7 @@ class Provider(AddressProvider):
         ("ZAC", "Zacatecas"),
     )
 
-    zip_codes = OrderedDict(
+    zip_codes: ClassVar[OrderedDict[str, tuple[int, int]]] = OrderedDict(
         (
             # The ZipCodes has a begin & final range
             # Source: Norma Técnica de Domicilios INEGI
