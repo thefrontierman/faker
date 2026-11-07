@@ -18,8 +18,7 @@ class Provider(BaseProvider):
 
     def passport_dob(self) -> datetime.date:
         """Generate a datetime date of birth."""
-        birthday = self.generator.date_of_birth()
-        return birthday
+        return self.generator.date_of_birth()
 
     def passport_owner(self, gender: SexLiteral = "X") -> Tuple[str, str]:
         """Generate a given_name and surname for a passport owner
